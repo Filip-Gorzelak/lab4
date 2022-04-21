@@ -6,6 +6,7 @@ VAR3="--logs"
 VAR33="--l"
 VAR4="--help"
 VAR44="-h"
+VAR5="-init"
 x=$2
 
 if [ "$VAR1" = "$VAR2" ] | [ "$VAR1" = "$VAR22" ] ; then
@@ -25,7 +26,12 @@ then
 	done
 elif [  "$VAR1" = "$VAR4" ] | [ "$VAR1" = "$VAR44" ]
 then
-	echo "--date : Wyswietl date"
-	echo "--logs : Stworz logi"
-	echo "--logs x : Stworz x logow"
+	echo "--date : -d : Wyswietl date"
+	echo "--logs : -l : Stworz logi"
+	echo "--logs x : -l x : Stworz x logow"
+	echo "--help : -h : Wyswietl pomoc"
+elif [ "$VAR1" = "$VAR5" ]
+then
+	git clone https://github.com/Filip-Gorzelak/lab4.git
+	PATH=$PATH/lab4
 fi
