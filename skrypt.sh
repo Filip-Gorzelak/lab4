@@ -6,6 +6,7 @@ VAR3="--logs"
 VAR4="--help"
 VAR44="-h"
 VAR5="--init"
+VAR6="--error"
 x=$2
 if [ -z $x ]
 	then
@@ -35,4 +36,15 @@ elif [ "$VAR1" = "$VAR5" ] #init
 then
 	git clone "https://github.com/Filip-Gorzelak/lab4.git"
 	export PATH=$PATH/lab4
+elif [ "$VAR1" = "$VAR6" ] #error
+then 
+   for ((i=1; i<=x; i++))
+	do
+		named="error"$i
+		name="error"$i".txt"
+		mkdir $named
+		touch $named/$name
+		echo "skrypt.sh" > $named/$name
+		date >> $named/$name
+	done
 fi
