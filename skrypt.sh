@@ -2,6 +2,7 @@
 VAR1=$1
 VAR2="--date"
 VAR3="--logs"
+VAR4="--help"
 x=$2
 
 if [ "$VAR1" = "$VAR2" ]; then
@@ -19,4 +20,9 @@ then
 		echo "skrypt.sh" > $name
 		date >> $name
 	done
+elif [  "$VAR1" = "$VAR4" ]
+then
+	echo "--date : Wyswietl date"
+	echo "--logs : Stworz logi"
+	echo "--logs x : Stworz x logow"
 fi
