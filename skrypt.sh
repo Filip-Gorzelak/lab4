@@ -6,7 +6,7 @@ VAR3="--logs"
 VAR33="--l"
 VAR4="--help"
 VAR44="-h"
-VAR5="-init"
+VAR5="--init"
 x=$2
 
 if [ "$VAR1" = "$VAR2" ] | [ "$VAR1" = "$VAR22" ] ; then
@@ -32,6 +32,6 @@ then
 	echo "--help : -h : Wyswietl pomoc"
 elif [ "$VAR1" = "$VAR5" ]
 then
-	git clone https://github.com/Filip-Gorzelak/lab4.git
-	PATH=$PATH/lab4
+	git clone "https://github.com/Filip-Gorzelak/lab4.git"
+	export PATH=$PATH/lab4
 fi
