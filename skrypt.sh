@@ -32,6 +32,8 @@ then
 	echo "--logs : -l : Stworz logi"
 	echo "--logs x : -l x : Stworz x logow"
 	echo "--help : -h : Wyswietl pomoc"
+	echo "--init : Sklonuj repozytorium"
+	echo "--error : Stworz errory"
 elif [ "$VAR1" = "$VAR5" ] #init
 then
 	git clone "https://github.com/Filip-Gorzelak/lab4.git"
