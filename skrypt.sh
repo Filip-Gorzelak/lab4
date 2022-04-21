@@ -1,13 +1,13 @@
 #!/bin/bash
 VAR1=$1
-VAR2="--date"
-VAR3="--logs"
-VAR4="--help"
+VAR2="--date -d"
+VAR3="--logs -l"
+VAR4="--help -h"
 x=$2
 
-if [ "$VAR1" = "$VAR2" ]; then
+if [ *"$VAR1"* = "$VAR2" ]; then
     date
-elif [  "$VAR1" = "$VAR3" ]
+elif [  *"$VAR1"* = "$VAR3" ]
 then 
 	if [ -z $x ]
 	then
@@ -20,7 +20,7 @@ then
 		echo "skrypt.sh" > $name
 		date >> $name
 	done
-elif [  "$VAR1" = "$VAR4" ]
+elif [  *"$VAR1"* = "$VAR4" ]
 then
 	echo "--date : Wyswietl date"
 	echo "--logs : Stworz logi"
